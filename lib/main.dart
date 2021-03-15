@@ -37,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _incrementCounter() async {
     DocumentSnapshot doc = await _db.collection('counter').doc('test').get();
-    Map<String, dynamic> fields = doc.data() ?? {'count: 0'};
+    Map<String, dynamic> fields = doc.data() ?? {'count': 0};
 
     setState(() {
       _counter = fields['count'] + 1;
